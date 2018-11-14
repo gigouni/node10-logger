@@ -1,0 +1,14 @@
+{
+  "name": "node10-logger",
+  "version": "1.0.0",
+  "description": "A bunyan module running with Node.js 10",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "node --experimental-modules src/index.mjs | ./node_modules/.bin/bunyan -o short",
+    "docker:build": "docker build --tag gigouni:node10-logger .",
+    "docker:run": "docker run -i -t gigouni:node10-logger npm start"
+  },
+  "dependencies": {
+    "bunyan": "1.8.12"
+  }
+}
